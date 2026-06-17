@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+.calculator{
+    width:350px;
+    padding:25px;
+    border-radius:20px;
+    background:#1e293b;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.calculator h2{
+    text-align:center;
+    color:white;
+    margin-bottom:15px;
+}
+
+#display{
+    width:100%;
+    height:70px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    margin-bottom:15px;
+    padding:10px;
+    text-align:right;
+    font-size:2rem;
+    background:#334155;
+    color:white;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+button{
+    height:60px;
+    border:none;
+    border-radius:10px;
+    font-size:1.3rem;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+/* Number Buttons */
+button:nth-child(5),
+button:nth-child(6),
+button:nth-child(7),
+button:nth-child(9),
+button:nth-child(10),
+button:nth-child(11),
+button:nth-child(13),
+button:nth-child(14),
+button:nth-child(15),
+button:nth-child(16){
+    background:#e2e8f0;
+}
+
+/* Operator Buttons */
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4),
+button:nth-child(8){
+    background:#f59e0b;
+    color:white;
+}
+
+/* Clear Button */
+button:nth-child(1){
+    background:#ef4444;
+    color:white;
+}
+
+/* Equal Button */
+button:nth-child(12){
+    background:#10b981;
+    color:white;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
