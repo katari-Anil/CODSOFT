@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Results - QuizMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container" style="max-width: 800px;">
+        <div class="glass-card text-center">
+            <h1>Session Completed</h1>
+            <p id="results-meta-subtitle" style="color: var(--text-muted); margin-top: 0.5rem;">Here is how you performed inside the testing framework engine</p>
+            
+            <div class="score-circle">
+                <span id="score-percentage-text" class="percentage">0%</span>
+                <span id="raw-score-ratio" style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">0 / 0 Right</span>
+            </div>
+
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+                <button id="restart-quiz-btn" class="btn btn-primary">Restart Evaluation</button>
+                <a href="quizzes.html" class="btn btn-secondary">Exit To Listing Collection</a>
+            </div>
+        </div>
+
+        <div class="glass-card review-section">
+            <h2 style="margin-bottom: 1.5rem;">Detailed Performance Log Review</h2>
+            <div id="detailed-review-append-target">
+                </div>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/results.js"></script>
+</body>
+</html>

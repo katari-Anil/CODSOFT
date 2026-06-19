@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Custom Quiz - QuizMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container" style="max-width: 850px;">
+        <div class="glass-card">
+            <h1 style="margin-bottom: 0.5rem;">Create a New Quiz Module</h1>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Design your question parameters, offer four answer alternatives and lock down the correct matrix sequence.</p>
+            
+            <form id="quiz-builder-form">
+                <div class="form-group">
+                    <label for="quiz-title">Quiz Title</label>
+                    <input type="text" id="quiz-title" class="form-control" placeholder="e.g., Advanced JavaScript Algorithms Core" required>
+                </div>
+                
+                <hr style="border: none; border-top: 1px solid var(--glass-border); margin: 2rem 0;">
+                
+                <div id="questions-wrapper-container">
+                    </div>
+
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="button" id="add-question-trigger" class="btn btn-secondary">+ Add Question Block</button>
+                    <button type="submit" class="btn btn-primary" style="margin-left: auto;">Compile & Save Quiz Module</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/createQuiz.js"></script>
+</body>
+</html>

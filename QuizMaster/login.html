@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - QuizMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="glass-card auth-card">
+            <h2 class="text-center" style="margin-bottom: 2rem;">Welcome Back</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-identity">Username or Email</label>
+                    <input type="text" id="login-identity" class="form-control" placeholder="Enter registration identifier" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" class="form-control" placeholder="Enter account secure password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Authenticate Account</button>
+            </form>
+            <p class="text-center" style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                New to the system? <a href="register.html" style="color: var(--accent-primary); text-decoration: none;">Register Free</a>
+            </p>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const identity = document.getElementById('login-identity').value.trim().toLowerCase();
+            const pass = document.getElementById('login-password').value;
+
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const targetedUser = users.find(u => u.username.toLowerCase() === identity || u.email.toLowerCase() === identity);
+
+            if (!targetedUser || targetedUser.password !== pass) {
+                alert('Invalid identification parameters or secure token mismatched.');
+                return;
+            }
+
+            localStorage.setItem('currentUser', JSON.stringify({
+                username: targetedUser.username,
+                email: targetedUser.email
+            }));
+
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>

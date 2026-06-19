@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Session Runner - QuizMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-interface-card glass-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <h2 id="active-quiz-title-header">Loading Evaluation Matrix Context...</h2>
+                <span id="tracker-digit-display" style="font-weight: 600; color: var(--accent-primary);">Question 0/0</span>
+            </div>
+            
+            <div class="quiz-progress-bar">
+                <div id="runtime-progress-fill" class="quiz-progress-fill"></div>
+            </div>
+
+            <h3 id="current-question-text" style="line-height: 1.4; margin-bottom: 1.5rem;">...</h3>
+
+            <div id="options-interactive-container" class="quiz-options-list">
+                </div>
+
+            <div class="quiz-controls">
+                <button id="prev-question-trigger" class="btn btn-secondary">Previous Question</button>
+                <button id="next-question-trigger" class="btn btn-primary">Next Step</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/takeQuiz.js"></script>
+</body>
+</html>
